@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SNZgESCa+Yvusjlnr9PCXe8Xac6N21VxhUo2X2rH0gk=",
+  "Source": "ContactManagementSystemAPI",
+  "BasePath": "_content/ContactManagementSystemAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
