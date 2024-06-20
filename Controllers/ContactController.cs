@@ -1,5 +1,6 @@
 ﻿using ContactManagementSystemAPI.IRepository;
 using ContactManagementSystemAPI.Models;
+using ContactManagementSystemAPI.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,19 +10,15 @@ namespace ContactManagementSystemAPI.Controllers
     [Route("[controller]")]
     public class ContactController : ControllerBase
     {
-        private readonly IContactRepository repo;
-        public ContactController(IContactRepository _repo)
-        {
-            this.repo = _repo;
-        }
 
         [HttpGet("GetById")]
-        public ActionResult GetById(int Id)
+        public ActionResult GetById(string Id)
         {
-            var data = this.repo.GetById(Id);
+            var repo = new ContactJsonRepository();
+            var data = repo.GetById(Id);
             if (data != null)
             {
-                return Ok(new JsonResult(new { StatusCode = 200, Data = data.Result }));
+                return Ok(new JsonResult(new { StatusCode = 200, Data = data }));
             }
             else
             {
@@ -32,10 +29,11 @@ namespace ContactManagementSystemAPI.Controllers
         [HttpGet("GetAll")]
         public ActionResult GetAll()
         {
-            var data = this.repo.GetAll();
+            var repo = new ContactJsonRepository();
+            var data = repo.GetAll();
             if (data != null)
             {
-                return Ok(new JsonResult(new { StatusCode = 200, Data = data.Result }));
+                return Ok(new JsonResult(new { StatusCode = 200, Data = data }));
             }
             else
             {
@@ -46,7 +44,8 @@ namespace ContactManagementSystemAPI.Controllers
         [HttpGet("Search")]
         public ActionResult Search(string text)
         {
-            var data = this.repo.Search(text);
+            var repo = new ContactJsonRepository();
+            var data = repo.Search(text);
             if (data != null)
             {
                 return Ok(new JsonResult(new { StatusCode = 200, Data = data }));
@@ -58,13 +57,14 @@ namespace ContactManagementSystemAPI.Controllers
         }
 
         [HttpDelete("Delete")]
-        public ActionResult Delete(int Id)
+        public ActionResult Delete(string Id)
         {
             try
             {
-                this.repo.Delete(Id);
-                var data = this.repo.Commit();
-                if (data.Result > 0)
+                var repo = new ContactJsonRepository();
+                var result = repo.Delete(Id);
+                //var data = repo.Commit();
+                if (result == true)
                     return Ok(new JsonResult(new { StatusCode = 200, Message = "Record deleted successfully!" }));
                 else
                     return BadRequest(new JsonResult(new { StatusCode = 400, Message = "Record not found!" }));
@@ -80,8 +80,9 @@ namespace ContactManagementSystemAPI.Controllers
         {
             try
             {
-                this.repo.Add(data);
-                this.repo.Commit();
+                var repo = new ContactJsonRepository();
+                repo.Add(data);
+                //repo.Commit();
                 return Ok(new JsonResult(new { StatusCode = 200, Data = data }));
             }
             catch (Exception ex)
@@ -95,8 +96,9 @@ namespace ContactManagementSystemAPI.Controllers
         {
             try
             {
-                this.repo.AddRange(data);
-                this.repo.Commit();
+                var repo = new ContactJsonRepository();
+                repo.AddRange(data);
+                //repo.Commit();
                 return Ok(new JsonResult(new { StatusCode = 200, Data = data }));
             }
             catch (Exception ex)
@@ -110,8 +112,9 @@ namespace ContactManagementSystemAPI.Controllers
         {
             try
             {
-                this.repo.Update(data);
-                this.repo.Commit();
+                var repo = new ContactJsonRepository();
+                repo.Update(data);
+               // repo.Commit();
                 return Ok(new JsonResult(new { StatusCode = 200, Data = data }));
             }
             catch (Exception ex)

@@ -12,7 +12,8 @@ This repository contains:
 
 # Database
 
-I am using SQLite database as a datasource to perform CRUD opreation
+I am using JSON fil as a datasource to perform CRUD opreation
+and its storing data in data with file name DataBase.txt
 
 # Asp.Net-Core-Web-API-CRUD-Operations
 Asp.Net Core Web API CRUD Operations

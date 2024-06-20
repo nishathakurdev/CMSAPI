@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\SampleProject\\ContactMS\\CMSAPI\\ContactManagementSystemAPI.csproj": {}
+    "E:\\WorkSpace\\CMSAPI\\ContactManagementSystemAPI.csproj": {}
   },
   "projects": {
-    "E:\\SampleProject\\ContactMS\\CMSAPI\\ContactManagementSystemAPI.csproj": {
+    "E:\\WorkSpace\\CMSAPI\\ContactManagementSystemAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SampleProject\\ContactMS\\CMSAPI\\ContactManagementSystemAPI.csproj",
+        "projectUniqueName": "E:\\WorkSpace\\CMSAPI\\ContactManagementSystemAPI.csproj",
         "projectName": "ContactManagementSystemAPI",
-        "projectPath": "E:\\SampleProject\\ContactMS\\CMSAPI\\ContactManagementSystemAPI.csproj",
-        "packagesPath": "C:\\Users\\MurliManoharThakur\\.nuget\\packages\\",
-        "outputPath": "E:\\SampleProject\\ContactMS\\CMSAPI\\obj\\",
+        "projectPath": "E:\\WorkSpace\\CMSAPI\\ContactManagementSystemAPI.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\WorkSpace\\CMSAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MurliManoharThakur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,29 +77,10 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.31, 6.0.31]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.31, 6.0.31]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.31, 6.0.31]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.31, 6.0.31]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -108,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
