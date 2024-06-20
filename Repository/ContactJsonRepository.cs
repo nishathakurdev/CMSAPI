@@ -5,14 +5,15 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 namespace ContactManagementSystemAPI.Repository
-{
+{    
     public class ContactJsonRepository
     {
+        string filePath = "Data/DataBase.json";
         public List<Contact> ReadJSONFile()
         {
             var serializer = new JsonSerializer();
             List<Contact> context = new();
-            using (var streamReader = new StreamReader(@"Data/DataBase.txt"))
+            using (var streamReader = new StreamReader(@filePath))
             using (var textReader = new JsonTextReader(streamReader))
             {
                 context = serializer.Deserialize<List<Contact>>(textReader);
@@ -99,7 +100,7 @@ namespace ContactManagementSystemAPI.Repository
 
         void SaveJSONFile(List<Contact> context)
         {
-            using (StreamWriter file = File.CreateText(@"Data/DataBase.txt"))
+            using (StreamWriter file = File.CreateText(@filePath))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 serializer.Serialize(file, context);
