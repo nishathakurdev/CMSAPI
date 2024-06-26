@@ -1,3 +1,6 @@
+#Note 
+Developed JSON file raad write functionality into JSONFileDataSource branch
+
 # ASP.NET Core Contact Web Api with Entity Framework , SQLite & Swagger.
 In this repository I want to give a plain starting point at how to build a WebAPI with ASP.NET Core.
 
@@ -11,7 +14,6 @@ This repository contains:
 ![image](https://github.com/nishathakurdev/CMSAPI/assets/122445351/b5859419-c54c-4d18-9191-3dc6122b1c94)
 
 # Database
-
 I am using JSON fil as a datasource to perform CRUD opreation
 and its storing data in data with file name DataBase.txt
 
