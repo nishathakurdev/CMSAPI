@@ -8,7 +8,7 @@ namespace ContactManagementSystemAPI.Repository
 {    
     public class ContactJsonRepository
     {
-        string filePath = "Data/DataBase.json";
+        string filePath = "Data/DataBaseFile.json";
         public List<Contact> ReadJSONFile()
         {
             var serializer = new JsonSerializer();
