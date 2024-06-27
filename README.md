@@ -5,7 +5,7 @@ Developed JSON file CRUD opration into JSONFileDataSource branch
 In this repository I want to give a plain starting point at how to build a WebAPI with ASP.NET Core.
 
 This repository contains:
-1. Contact Controller which is dealing with Contacts. You can GETALL/GET/POST/PUT/DELETE them, and GET courses for a spesific contact.
+1. Contact Controller which is dealing with Contacts. You can GETALL/GET/POST/PUT/DELETE them.
 
 ![image](https://github.com/nishathakurdev/CMSAPI/assets/122445351/33500ba7-18ea-4e59-a369-aeb1f6bee881)
 
