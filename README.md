@@ -1,7 +1,7 @@
 #Note 
-Developed JSON file raad write functionality into JSONFileDataSource branch
+Developed JSON file CRUD opration into JSONFileDataSource branch
 
-# ASP.NET Core Contact Web Api with Entity Framework , SQLite & Swagger.
+# ASP.NET Core Contact Web Api with Entity Framework , JSON file, SQLite & Swagger.
 In this repository I want to give a plain starting point at how to build a WebAPI with ASP.NET Core.
 
 This repository contains:
