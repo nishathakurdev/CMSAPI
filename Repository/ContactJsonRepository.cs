@@ -9,7 +9,7 @@ namespace ContactManagementSystemAPI.Repository
     public class ContactJsonRepository
     {
         string filePath = "Data/DataBaseFile.json";
-        public List<Contact> ReadJSONFile()
+        private List<Contact> ReadJSONFile()
         {
             var serializer = new JsonSerializer();
             List<Contact> context = new();
@@ -49,7 +49,11 @@ namespace ContactManagementSystemAPI.Repository
         public void AddRange(List<Contact> entity)
         {
             //context.Set<T>().AddRange(entity);
-            var context = ReadJSONFile();
+            var context = ReadJSONFile();            
+            foreach (var item in entity)
+            {
+                item.Id = Guid.NewGuid().ToString();
+            }
             context.AddRange(entity);
             SaveJSONFile(context);
         }
